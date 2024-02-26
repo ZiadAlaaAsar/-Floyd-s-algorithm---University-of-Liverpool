@@ -1,0 +1,28 @@
+import unittest
+from floyd_recursive import floydWarshall,recursive_floydWarshall,V
+
+class TestFloydWarshall(unittest.TestCase):
+
+
+    def setUp(self):
+
+        self.INF = 99999
+   
+        self.graph = [[0, 7, self.INF, 8],
+                 [self.INF, 0, 5, self.INF],
+                 [self.INF, self.INF, 0, 2],
+                 [self.INF, self.INF, self.INF, 0]]
+        
+    def test_floydWarshall(self):
+
+        output_graph = [[0, 7, 12, 8],
+                  [self.INF, 0, 5, 7],
+                  [self.INF, self.INF, 0, 2],
+                  [self.INF, self.INF, self.INF, 0]]
+
+        floydWarshall(self.graph)
+        self.assertEqual(self.graph, output_graph)
+   
+
+if __name__ == '__main__':
+    unittest.main()
