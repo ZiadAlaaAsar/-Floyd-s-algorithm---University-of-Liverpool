@@ -1,4 +1,4 @@
-# floydwarshall
+# Floyd-Warshall Recursive Algorithm (LIVMidMod_AssignmentCode)
 
 This is a Python package to use the Floyd-Warshall algorithm to calculate the distance matrix in an adjacency matrix.
 
